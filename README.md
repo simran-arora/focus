@@ -1,8 +1,6 @@
 # Can Foundation Models Help Us Achieve Perfect Secrecy
 
-### Code updates coming soon!
-
-This code is for benchmarking FMs of various sizes and types across federated learning tasks.  
+This code is for benchmarking FMs of various sizes and types across federated learning tasks. The paper can be found here: https://arxiv.org/abs/2205.13722  
 
 1. Use the following commands to clone and install this package. We highly recommend you use conda environments.
 
