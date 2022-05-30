@@ -9,7 +9,8 @@ This code is for benchmarking FMs of various sizes and types across federated le
 ```
 conda create -n py37 python=3.7
 conda activate py37
-cd neurips_privacy
+git clone git@github.com:simran-arora/privacy_fm.git
+cd privacy_fm
 pip install -e .
 pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
