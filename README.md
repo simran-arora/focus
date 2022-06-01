@@ -9,15 +9,15 @@ Use the following commands to clone and install this package. We highly recommen
 ```
 conda create -n py37 python=3.7
 conda activate py37
-git clone git@github.com:simran-arora/privacy_fm.git
-cd privacy_fm
+git clone git@github.com:simran-arora/focus.git
+cd focus
 pip install -e .
 pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
 ## Obtain the datasets
 
-Download benchmark datasets to the ``privacy_fm/benchmarks/'' directory
+Download benchmark datasets to the ``focus/benchmarks/'' directory
 ```
 mkdir benchmarks/
 cd benchmarks/
@@ -42,7 +42,7 @@ The FedML Federated Learning benchmark suite provides: CIFAR-10
 
 ## Run the code
 
-The ``privacy_fm/scripts/`` directory provides scripts to run experiments.
+The ``focus/scripts/`` directory provides scripts to run experiments.
 
 For example, to run CIFAR10 similarity search with CLIP, run:
 ```
