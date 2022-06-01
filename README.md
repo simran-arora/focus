@@ -1,8 +1,10 @@
-# Can Foundation Models Help Us Achieve Perfect Secrecy
+# Can Foundation Models Help Us Achieve Perfect Secrecy?
 
 This code is for benchmarking FMs of various sizes and types across federated learning tasks. The paper can be found here: https://arxiv.org/abs/2205.13722  
 
-1. Use the following commands to clone and install this package. We highly recommend you use conda environments.
+## Setup
+
+Use the following commands to clone and install this package. We highly recommend you use conda environments.
 
 ```
 conda create -n py37 python=3.7
@@ -13,7 +15,9 @@ pip install -e .
 pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 ```
 
-2. Download benchmark datasets to the ``privacy_fm/benchmarks/'' directory
+## Obtain the datasets
+
+Download benchmark datasets to the ``privacy_fm/benchmarks/'' directory
 ```
 mkdir benchmarks/
 cd benchmarks/
@@ -35,9 +39,12 @@ The FedML Federated Learning benchmark suite provides: CIFAR-10
 - Clone this repo in the ``benchmarks/`` directory: https://github.com/FedML-AI/FedML/tree/fedcv
 - [CIFAR-10] Go to data/cifar10/ and run ``bash download_cifar10.sh``
 
-3. The ``neurips_privacy/scripts/`` provides scripts to run experiments.
 
-To run CIFAR10 similarity search with CLIP, run:
+## Run the code
+
+The ``privacy_fm/scripts/`` directory provides scripts to run experiments.
+
+For example, to run CIFAR10 similarity search with CLIP, run:
 ```
 bash scripts/cifar.sh
 ```
@@ -47,26 +54,15 @@ To run Sent140 similarity search with bi-encoder, prompting with T0 (zero shot),
 bash scripts/sent140.sh
 ```
 
-To run CelebA similarity search with CLIP, run:
-```
-bash scripts/celeba.sh
-```
 
-To run Reddit prompting with GPT3 (zero or few shot), use:
+## Citation
+Please use the following Bibtex for this work:
 ```
-bash scripts/reddit.sh
-```
-
-To run 20News similarity search with bi-encoder, prompting with T0 (zero shot), and/or prompting with GPT3 (zero shot), use:
-```
-bash scripts/news20.sh
-```
-
-To run Femnist similarity search with CLIP, run:
-```
-bash scripts/femnist.sh
-```
-
-For MRQA, we use the OpenAI API.
-
-The arguments are described in ``main.py`` and the key decisions are the dataset and model type.
+@misc{arora2022focus,
+      title={Can Foundation Models Help Us Achieve Perfect Secrecy?}, 
+      author={Simran Arora and Christopher Ré},
+      year={2022},
+      eprint={2205.13722},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
