@@ -1,0 +1,3 @@
+[submodule "benchmarks/leaf"]
+	path = benchmarks/leaf
+	url = git@github.com:simran-arora/leaf.git
