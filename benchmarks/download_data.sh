@@ -11,6 +11,7 @@ cd ../celeba
 ./preprocess.sh -s niid --sf 1.0 -k 0 -t sample
 
 # 20News
+cd ../../../
 rm -rf 20news-bydate-test
 rm -rf 20news-bydate-train
 rm 20news-bydate.tar.gz
