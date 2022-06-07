@@ -36,3 +36,14 @@ do
             --max_sequence_length 1800 
     done
 done
+
+
+# Command for GPT OpenAI API Inference 
+python -m privacy.main \
+    --dataset 20news \
+    --model gpt6.7 \
+    --paradigm prompt \
+    --split test \
+    --batch_size 1 \
+    --seed 0 \
+    --openai_key "fill in"

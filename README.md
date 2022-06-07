@@ -22,6 +22,11 @@ git submodule init
 git submodule update
 ```
 
+If you want to run inference with the API models, first obtain your OpenAI inference API key here [OpenAI API](https://openai.com/api/). Then set the environment variables:
+```
+export OPENAI_API_KEY="<YOUR API KEY>"
+```
+
 ## Obtain the datasets
 
 Download benchmark datasets to the ``focus/benchmarks/'' directory
@@ -45,6 +50,7 @@ bash scripts/cifar.sh
 bash scripts/sent140.sh
 ```
 
+We include examples for running inference with the API in the script files. Note that this requires providing the ```openai_key``` command line argument.
 
 ## Citation
 Please use the following Bibtex for this work:
@@ -57,3 +63,6 @@ Please use the following Bibtex for this work:
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
+```
+
+We welcome contributions and feel free to reach out at [simarora@stanford.edu](simarora@stanford.edu).

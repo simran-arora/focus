@@ -1,4 +1,4 @@
-# Command for T0 (t03b, t0pp -- we ran the latter on CPUs)
+# Command for T0 (t03b, t0pp -- we ran the latter on CPUs, another option you can use is the HuggingfaceAPI https://huggingface.co/inference-api)
 python -m privacy.main \
     --dataset sent140 \
     --model t03b \
@@ -84,3 +84,16 @@ do
     done
 done
 
+
+# Command for GPT OpenAI API Inference 
+python -m privacy.main \
+    --dataset sent140 \
+    --model gpt6.7 \
+    --paradigm prompt \
+    --split test \
+    --batch_size 1 \
+    --client_subsample 0.025 \
+    --seed 0 \
+    --prompt_choice random_incontext \
+    --num_incontext 3 \
+    --openai_key "fill in"

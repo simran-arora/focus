@@ -58,3 +58,16 @@ do
             --num_incontext ${NUM}
     done
 done
+
+
+# Command for GPT OpenAI API Inference 
+python -m privacy.main \
+    --dataset reddit \
+    --model gpt6.7 \
+    --paradigm prompt \
+    --split test \
+    --batch_size 1 \
+    --seed 0 \
+    --prompt_choice random_incontext \
+    --num_incontext 1 \
+    --openai_key "fill in"

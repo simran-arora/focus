@@ -30,6 +30,9 @@ from privacy.datasets.news20 import News20
 from privacy.datasets.femnist import FEMNIST
 from privacy.datasets.reddit import Reddit
 
+API_MODELS = ["gpt175", "gpt6.7"]
+
+
 def get_model(args):
     print("Loading model...")
     if "clip" in args.model:
@@ -64,6 +67,9 @@ def get_model(args):
         model = AutoModelForSeq2SeqLM.from_pretrained(t0_variant, cache_dir=args.cache_dir)
     elif "gpt" in args.model:
         transform = None
+
+        if args.model in API_MODELS:
+            return None, None, None 
 
         if args.model == "gpt2.7":
              gpt_variant = 'EleutherAI/gpt-neo-2.7B'
@@ -257,9 +263,10 @@ def initialize_run(args):
     # get dataset and model
     model, transform, tokenizer = get_model(args)
     print(f"Loaded model: {args.model}")
-    total_trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    total_params = sum(p.numel() for p in model.parameters()) 
-    print("Total params ", total_params, " total trainable params ", total_trainable_params)
+    if model:
+        total_trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        total_params = sum(p.numel() for p in model.parameters()) 
+        print("Total params ", total_params, " total trainable params ", total_trainable_params)
     training_dataset, test_dataset, transform = get_dataset(args, transform=transform, tokenizer=tokenizer)  
     num_categories = np.unique(training_dataset.targets).shape[0]   
 
