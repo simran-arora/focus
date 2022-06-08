@@ -59,7 +59,6 @@ def run_api_inference(args, dataset):
             with open(expt_path, "w") as f:
                 json.dump(examples, f)
             print("Saved")
-            break
             
     # save final results
     with open(expt_path, "w") as f:
