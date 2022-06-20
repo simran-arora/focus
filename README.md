@@ -1,6 +1,8 @@
 # Can Foundation Models Help Us Achieve Perfect Secrecy?
 
-This code is for benchmarking FMs of various sizes and types across federated learning tasks. The paper can be found here: https://arxiv.org/abs/2205.13722  
+This repository contains resources for FOCUS, a privacy framework for serving personal machine learning tasks. We include scripts to download data and evaluate foundation models of various sizes and types across popular privacy benchmarks from the federated learning literature. Additional information can be found in the paper: https://arxiv.org/abs/2205.13722.
+
+<p align="center"><img width="85%" src="imgs/main_figure.png" /></p>
 
 ## Setup
 
