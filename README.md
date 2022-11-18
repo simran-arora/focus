@@ -61,8 +61,8 @@ Please use the following Bibtex for this work:
       title={Can Foundation Models Help Us Achieve Perfect Secrecy?}, 
       author={Simran Arora and Christopher Ré},
       year={2022},
-      eprint={2205.13722},
-      archivePrefix={arXiv},
+      url={https://arxiv.org/abs/2205.13722},
+      journal={arXiv:2205.13722},
       primaryClass={cs.LG}
 }
 ```
